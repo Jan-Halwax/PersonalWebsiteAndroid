@@ -1,3 +1,52 @@
 <resources>
-    <string name="app_name">Personal Website</string>
+    <string name="app_name">Halwax Admin</string>
+
+    <!-- Login Screen -->
+    <string name="login_title">Admin-Bereich</string>
+    <string name="login_email">E-Mail</string>
+    <string name="login_password">Passwort</string>
+    <string name="login_button">Anmelden</string>
+    <string name="login_error_empty_fields">E-Mail und Passwort müssen ausgefüllt werden</string>
+    <string name="login_error_invalid">Ungültige E-Mail oder Passwort</string>
+
+    <!-- Skills Screen -->
+    <string name="skills_title">Skills verwalten</string>
+    <string name="skills_empty">Keine Skills vorhanden</string>
+    <string name="skills_add">Skill hinzufügen</string>
+    <string name="skills_edit">Skill bearbeiten</string>
+    <string name="skills_delete">Skill löschen</string>
+    <string name="skills_date">Datum</string>
+    <string name="skills_icon_url">Icon URL</string>
+    <string name="skills_is_learning">Wird noch gelernt</string>
+
+    <!-- Projects Screen -->
+    <string name="projects_title">Projekte verwalten</string>
+    <string name="projects_current_tab">Aktuelle Projekte</string>
+    <string name="projects_portfolio_tab">Portfolio</string>
+    <string name="projects_empty_current">Keine aktuellen Projekte vorhanden</string>
+    <string name="projects_empty_portfolio">Keine Portfolio-Projekte vorhanden</string>
+    <string name="projects_add">Projekt hinzufügen</string>
+    <string name="projects_edit">Projekt bearbeiten</string>
+    <string name="projects_delete">Projekt löschen</string>
+    <string name="projects_start_date">Startdatum</string>
+    <string name="projects_end_date">Abschlussdatum (erforderlich für Portfolio)</string>
+    <string name="projects_is_current">Aktuelles Projekt (ansonsten Portfolio)</string>
+    <string name="projects_image_url">Bild URL</string>
+    <string name="projects_github_url">GitHub URL</string>
+    <string name="projects_app_url">App URL (optional)</string>
+    <string name="projects_description">Beschreibung</string>
+    <string name="projects_features">Features</string>
+    <string name="projects_feature_title">Feature-Titel</string>
+    <string name="projects_feature_description">Feature-Beschreibung</string>
+    <string name="projects_add_feature">Feature hinzufügen</string>
+    <string name="projects_no_features">Noch keine Features hinzugefügt</string>
+
+    <!-- Common -->
+    <string name="save">Speichern</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="delete">Löschen</string>
+    <string name="delete_confirm">Möchtest du das Element wirklich löschen?</string>
+    <string name="error">Fehler: %1$s</string>
+    <string name="loading">Wird geladen…</string>
+    <string name="to_website">Zur Website</string>
 </resources>
