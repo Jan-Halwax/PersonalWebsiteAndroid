@@ -11,7 +11,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.google.firebase.Firebase
-import com.google.firebase.app.initialize
 import com.google.firebase.firestore.firestore
 import dev.halwax.personalWebsite.navigation.AppNavigation
 import dev.halwax.personalWebsite.ui.theme.PersonalWebsiteTheme
