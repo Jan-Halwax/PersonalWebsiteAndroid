@@ -2,8 +2,10 @@ package dev.halwax.personalWebsite.ui.skills
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.google.firebase.Timestamp
 import dev.halwax.personalWebsite.model.Skill
 import dev.halwax.personalWebsite.repository.SkillRepository
+import dev.halwax.personalWebsite.utils.DateUtils
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -14,6 +16,7 @@ import java.util.Date
 /**
  * ViewModel für den Skills-Bildschirm
  * Kapselt die Verwaltung der Skills und die zugehörige UI-Logik
+ * Die Datei befindet sich im Ordner app/src/main/java/dev/halwax/personalWebsite/ui/skills/
  */
 class SkillsViewModel(
     private val skillRepository: SkillRepository = SkillRepository()
@@ -117,6 +120,7 @@ class SkillsViewModel(
             return
         }
 
+        // Erstellung des Skills mit einem Timestamp für das Datumsfeld
         val skill = Skill(
             id = _currentEditSkill.value?.id ?: "",
             name = _skillName.value.trim(),

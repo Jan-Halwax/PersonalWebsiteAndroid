@@ -15,6 +15,7 @@ import java.util.Date
 /**
  * Repository für Projekte
  * Implementiert das Single-Responsibility-Prinzip für die Verwaltung von Projekten
+ * Die Datei befindet sich im Ordner app/src/main/java/dev/halwax/personalWebsite/repository/
  */
 class ProjectRepository {
 
