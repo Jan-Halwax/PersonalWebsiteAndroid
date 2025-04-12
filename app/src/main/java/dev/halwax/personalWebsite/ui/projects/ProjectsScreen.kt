@@ -5,8 +5,11 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.calculateEndPadding
+import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -51,6 +54,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -134,7 +138,12 @@ fun ProjectsScreen(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(padding)
+                .padding(
+                    start = padding.calculateStartPadding(LocalLayoutDirection.current),
+                    top = padding.calculateTopPadding(),
+                    end = padding.calculateEndPadding(LocalLayoutDirection.current),
+                    bottom = padding.calculateBottomPadding()
+                )
                 .background(DarkBackground)
         ) {
             // Tab-Leiste
@@ -197,7 +206,10 @@ fun ProjectsScreen(
                                     }
                                 )
                             } else {
-                                LazyColumn {
+                                LazyColumn(
+                                    // Füge ein zusätzliches Padding unten hinzu, um Platz für den FAB zu schaffen
+                                    contentPadding = PaddingValues(bottom = 88.dp, top = 8.dp)
+                                ) {
                                     items(currentProjects) { project ->
                                         ProjectItem(
                                             project = project,
@@ -230,7 +242,10 @@ fun ProjectsScreen(
                                     }
                                 )
                             } else {
-                                LazyColumn {
+                                LazyColumn(
+                                    // Füge ein zusätzliches Padding unten hinzu, um Platz für den FAB zu schaffen
+                                    contentPadding = PaddingValues(bottom = 88.dp, top = 8.dp)
+                                ) {
                                     items(portfolioProjects) { project ->
                                         ProjectItem(
                                             project = project,
