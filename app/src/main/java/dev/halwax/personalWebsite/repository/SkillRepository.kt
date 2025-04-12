@@ -14,6 +14,7 @@ import java.util.Date
 /**
  * Repository für Skills
  * Implementiert das Single-Responsibility-Prinzip für die Verwaltung von Skills
+ * Die Datei befindet sich im Ordner app/src/main/java/dev/halwax/personalWebsite/repository/
  */
 class SkillRepository {
 

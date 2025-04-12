@@ -2,9 +2,11 @@ package dev.halwax.personalWebsite.ui.projects
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.google.firebase.Timestamp
 import dev.halwax.personalWebsite.model.Feature
 import dev.halwax.personalWebsite.model.Project
 import dev.halwax.personalWebsite.repository.ProjectRepository
+import dev.halwax.personalWebsite.utils.DateUtils
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -16,6 +18,7 @@ import java.util.Date
 /**
  * ViewModel für den Projekte-Bildschirm
  * Kapselt die Verwaltung der Projekte und die zugehörige UI-Logik
+ * Die Datei befindet sich im Ordner app/src/main/java/dev/halwax/personalWebsite/ui/projects/
  */
 class ProjectsViewModel(
     private val projectRepository: ProjectRepository = ProjectRepository()
@@ -230,6 +233,7 @@ class ProjectsViewModel(
             return
         }
 
+        // Erstellen des Projekts mit Timestamps für die Datumsfelder
         val project = Project(
             id = _currentEditProject.value?.id ?: "",
             name = _projectName.value.trim(),
